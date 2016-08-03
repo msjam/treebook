@@ -4,11 +4,27 @@
     <title>Treebook</title>
     <%= csrf_meta_tags %>
 
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+<!--
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+-->  
   </head>
 
   <body>
-    <%= yield %>
+  	<div class="navbar navbar-fixed-top">
+  		<div class="navbar-inner">
+  			<div class="container">
+  				<a href="#" class="brand"> Treebook</a>
+  				<ul class="nav">
+  					<li><%= link_to "All Statuses", statuses_path %></li>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="container">
+    	<%= yield %>
+    </div>
   </body>
 </html>
